@@ -21,7 +21,11 @@ def contours(path):
     cs, _ = cv2.findContours(mask, cv2.RETR_CCOMP, cv2.CHAIN_APPROX_NONE)
     cs = [c for c in cs if cv2.contourArea(c) > 40]  # drop specks
     pts = np.vstack(cs).reshape(-1, 2)
-    return cs, pts.min(axis=0), pts.max(axis=0)
+    # optical centre: the bounding box of the solid mass, without thin tusks and tail
+    solid = cv2.morphologyEx(mask, cv2.MORPH_OPEN, cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (41, 41)))
+    sy, sx = np.nonzero(solid)
+    optical = np.array([(sx.min() + sx.max()) / 2, (sy.min() + sy.max()) / 2])
+    return cs, pts.min(axis=0), pts.max(axis=0), optical, pts
 
 
 def smooth_path(c, scale, off):
@@ -38,16 +42,23 @@ def smooth_path(c, scale, off):
 
 
 def build(src):
-    cs, lo, hi = contours(src)
+    return contours(src)
+
+
+def svg_badge(cs, lo, hi, optical, pts):
+    """Optical centring: thin tusks and tail stretch the bounding box and the heavy body pulls the
+    area centroid, both look off-centre. Horizontally the bounding box of the solid mass (tusks and
+    tail opened away) goes to the middle, vertically the full bounding box (back and feet are clean
+    edges). The silhouette shrinks until every point keeps clear of the ring."""
     w, h = hi - lo
-    return cs, lo, w, h
-
-
-def svg_badge(cs, lo, w, h):
-    # fit the silhouette into the inner disc (radius 225 of 256) with some air
-    target = 372.0
-    scale = target / max(w, h)
-    off = lo - np.array([(512 - w * scale) / 2 / scale, (512 - h * scale) / 2 / scale]) + np.array([0, 8 / scale])
+    centre = np.array([optical[0], (lo[1] + hi[1]) / 2])
+    scale = 372.0 / max(w, h)
+    while True:
+        off = centre - 256 / scale
+        r = np.hypot(*((pts - off) * scale - 256).T).max()
+        if r <= 198 or scale < 0.1:  # inner disc radius 225: the tusk tips keep ~27 px of air
+            break
+        scale *= 0.99
     d = "".join(smooth_path(c, scale, off) for c in cs)
     return f"""<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="t">
   <title id="t">wb mascot: an elephant, because elephants never forget</title>
@@ -60,7 +71,8 @@ def svg_badge(cs, lo, w, h):
 """
 
 
-def svg_mark(cs, lo, w, h):
+def svg_mark(cs, lo, hi, optical, pts):
+    w, h = hi - lo
     pad = 16
     scale = 480.0 / max(w, h)
     vw, vh = w * scale + 2 * pad, h * scale + 2 * pad
