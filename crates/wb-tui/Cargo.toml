@@ -1,0 +1,24 @@
+[package]
+name = "wb-tui"
+version = "0.1.0"
+edition = "2021"
+description = "Menschen-Ebene der Wissensbank: ratatui-Ansichten, Schnappschüsse, statische Übersicht"
+license = "MIT"
+publish = false
+
+[features]
+default = []
+# Anbindung an wb-core: `CoreSource` (DataSource über einen offenen `Vault`) und `run(&Vault)`
+core = ["dep:wb-core"]
+
+[dependencies]
+ratatui = { version = "0.30", default-features = false, features = ["crossterm"] }
+unicode-width = "0.2"
+wb-core = { workspace = true, optional = true }
+
+[dev-dependencies]
+tempfile.workspace = true
+
+[[example]]
+name = "real"
+required-features = ["core"]

@@ -1,0 +1,34 @@
+[workspace]
+resolver = "3"
+members = ["crates/*"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.91"
+license = "MIT"
+publish = false
+
+[workspace.dependencies]
+wb-core = { path = "crates/wb-core" }
+wb-tui = { path = "crates/wb-tui" }
+rusqlite = { version = "0.41", features = ["bundled"] }
+rust-stemmers = "1.2"
+unicode-normalization = "0.1"
+walkdir = "2.5"
+same-file = "1"
+blake3 = "1.8"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+clap = { version = "4.6", features = ["derive", "env", "wrap_help"] }
+tempfile = "3"
+
+[profile.release]
+opt-level = 3
+lto = "thin"
+codegen-units = 4
+
+# Abhängigkeiten (SQLite, blake3, Stemmer) auch im Debug-Build optimieren: Tests mit großen
+# Dateien und Messungen laufen sonst ein Vielfaches langsamer; der eigene Code bleibt debugbar.
+[profile.dev.package."*"]
+opt-level = 2

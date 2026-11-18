@@ -1,0 +1,45 @@
+ Wissensbank   1 Übersicht   2 Projekt   3 Suche   4 Graph                                                                                              fixture
+ Segelboot-Restaurierung Übersicht · 0 eingehend · 52 ausgehend
+ Ebene Notizen · Tiefe 1 · d Tiefe · p Ebene
+
+ Fokus                                                                            Ausgehend
+                                                                               ┌─ ● Aufbau Grundlagen
+                                                                               ├─ ● Aufbau im Detail
+                                                                               ├─ ● Verbrauch Stand
+                                                                               ├─ ● Kontakte Sonderfälle
+                                                                               ├─ ● Lagerung Plan
+                                                                               ├─ ● Reihenfolge Stand
+                                                                               ├─ ● Lagerung Lehren
+                                                                               ├─ ● Prüfstand Entwurf
+                                                                               ├─ ● Rückblick Plan
+                                                                               ├─ ● Schnittstellen Messung 2
+                                                                               ├─ ● Umbau Plan
+                                                                               ├─ ● Werkzeuge Notizen
+                                                                               ├─ ● Zeitplan Herbst
+                                                                               ├─ ● Lagerung Entwurf
+                                                                               ├─ ● Budget Stand
+                                                                               ├─ ● Checkliste Version 2
+                                                                               ├─ ● Fehlerprotokoll Plan
+                                                                               ├─ ● Prüfstand Auswertung
+ ● Segelboot-Restaurierung Übersicht                                         ──┼─ ● Werkzeuge Entwurf
+                                                                               ├─ ● Skizzen Version 2
+                                                                               ├─ ◕ Materialliste Plan
+                                                                               ├─ ◕ × Beschaffung Notizen
+                                                                               ├─ ◕ Beschaffung Stand
+                                                                               ├─ ◕ Messwerte Stand
+                                                                               ├─ ◕ Umbau Sonderfälle
+                                                                               ├─ ◕ Beschaffung Entwurf
+                                                                               ├─ ◕ Rückblick Messung
+                                                                               ├─ ◕ Varianten Varianten
+                                                                               ├─ ◕ Fehlerprotokoll Regeln
+                                                                               ├─ ◕ Abnahme Varianten
+                                                                               ├─ ◕ Beschaffung Stand 2
+                                                                               ├─ ◕ Budget Version 2
+                                                                               ├─ ◕ Rückblick Auswertung
+                                                                               ├─ ◕ Werkzeuge Plan
+                                                                               ├─ ◕ Lagerung Sonderfälle
+                                                                               ├─ ◕ Grenzwerte Lehren
+                                                                               ├─ ◕ Kontakte im Detail
+                                                                               └─ ◕ Normen Notizen
+                                                                                  … +14 weitere
+ ←↑↓→ wählen  o lesen  d Tiefe  p Notizen/Projekte  Esc zurück  ? Hilfe  q Ende

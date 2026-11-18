@@ -1,0 +1,24 @@
+ Wissensbank   1 Übersicht   2 Projekt   3 Suche   4 Graph              fixture
+ Segelboot-Restaurierung · 59 Notizen · 452K · heute · 53 offen · 5 Befu…  3/59
+ Stand  rumpf geschliffen, lackierung offen
+    Thema                                   Größe    Token Alter SOELPQ V G T W
+● Ü Segelboot-Restaurierung Übersicht       ██████▊  ~5.2k heute SOEL·· · · · ·
+●   Aufbau Grundlagen                       ██        ~446 heute SOE··· · · · ·
+●   Aufbau im Detail                        ██▉       ~948    1T ··E··· · · · ·
+● × Schnittstellen Messung                  ██████▊  ~5.2k    1T SOEL·Q · · · ·
+●   Lagerung Notizen                        ██▍       ~665    2T SO··P· · · · ·
+●   Verbrauch Stand                         ██▏       ~491    2T SO···· · · · ·
+●   Kontakte Sonderfälle                    ██▊       ~826    3T ··EL·· · · · ·
+●   Lagerung Plan                           ██        ~460    3T SOELPQ · · · ·
+●   Reihenfolge Stand                       ██▌       ~692    3T S····· · · · ·
+●   Lagerung Lehren                         █▊        ~329    4T SOE·P· · · · ·
+●   Prüfstand Entwurf                       █████▋   ~3.6k    4T SO··P· · · · ·
+●   Rückblick Plan                          ███▎     ~1.2k    4T SO·L·· · · · ·
+●   Schnittstellen Messung 2                █▌        ~268    4T SOEL·Q · · · ·
+●   Umbau Plan                              ███████▌ ~6.4k    4T S·EL·· · 1 · ·
+●   Werkzeuge Notizen                       ███▍     ~1.3k    4T S·E·P· · · · ·
+●   Zeitplan Herbst                         █████▌   ~3.4k    4T SOEL·· · · · ·
+ Aufbau im Detail Aufbau im Detail im Projekt Segelboot-Restaurierung.
+ ← 2 eingehend · → 0 ausgehend · Entscheidungen
+ S Stand O Offen E Entsch. L Lehren P Prüf. Q Quellen × überholt
+ ↑↓ wählen  Enter lesen  g Graph  s Sortierung  ? Hilfe  q Ende

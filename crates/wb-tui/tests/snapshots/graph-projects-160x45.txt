@@ -1,0 +1,45 @@
+ Wissensbank   1 Übersicht   2 Projekt   3 Suche   4 Graph                                                                                              fixture
+ 20 von 24 Projekten sind verbunden · Segelboot-Restaurierung hat 17 Nachbarn
+ Ebene Projekte · Tiefe 2 · d Tiefe · p Ebene
+
+ Verbindungsstärke                │Fokus                                      Verbunden                                  Verbunden ·2
+ Segelboot-Restau… █████████  55  │                                        ┌─ ● Heimkino-Netzwerk 10Q +5            ──┬─ ○ Imkerei 1Q
+ Gartenplaner      ███████▎   44  │                                        │                                          └─ ○ Pilz-Zucht 1Q
+ Heimkino-Netzwerk ███████    43  │                                        │
+ Kleinstadt-Chron… ██████▌    40  │                                        ├─ ● Gartenplaner 8Q +1                  ──┬─ ◕ Reisekasse 1Q
+ Familienrezepte   ███▊       23  │                                        │                                          └─ ○ Umzugsliste 1L
+ Modellbahn        ███▊       23  │                                        │
+ Orgelbau-Notizen  ███▎       20  │                                        ├─ ◐ Kleinstadt-Chronik 6Q               ──── ○ Zeitkapsel 1Q
+ Sauerteig-Labor   ███▏       19  │                                        │
+ Sternkarten-Atlas ██▏        13  │● Segelboot-Restaurierung             ──┼─ ○ Familienrezepte 4Q
+ Vogelbeobachtung  ██▏        13  │                                        ├─ ◕ Modellbahn 4Q
+ Pilz-Zucht        █▌          9  │                                        ├─ ◕ Sauerteig-Labor 1L 3Q
+ Kaffeeroesterei   █▎          8  │                                        ├─ ◐ Sternkarten-Atlas 4Q                ──── ◐ Schachtraining 1Q
+ Umzugsliste       █▎          8  │                                        │
+ Balkonbewaesseru… █▏          7  │                                        ├─ ◐ Orgelbau-Notizen 3Q
+ Reisekasse        █▏          7  │                                        ├─ ◐ Vogelbeobachtung 3Q
+ Zeitkapsel        █▏          7  │                                        ├─ ○ Steuerkram 1L 1Q
+ Steuerkram        ▉           5  │                                        ├─ ● Balkonbewaesserung 1Q
+ Imkerei           ▋           4  │                                        └─ ◕ Kaffeeroesterei 1Q
+ Schachtraining    ▌           3  │                                           … +5 weitere
+ Wetterstation     ▌           3  │
+                                  │
+                                  │
+                                  │
+                                  │
+                                  │
+                                  │
+                                  │
+                                  │
+                                  │
+                                  │
+                                  │
+                                  │
+                                  │
+                                  │
+                                  │
+                                  │
+                                  │
+ Ohne Verbindung (4): Fahrrad-Werkstatt, Lesezirkel, Loetstation, Podcast-Schnitt
+
+ ←↑↓→ wählen  Tab nächstes  o lesen  d Tiefe  p Notizen/Projekte  Esc zurück  ? Hilfe  q Ende

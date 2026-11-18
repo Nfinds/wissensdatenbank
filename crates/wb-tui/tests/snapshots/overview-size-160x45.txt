@@ -1,0 +1,45 @@
+ Wissensbank   1 Übersicht   2 Projekt   3 Suche   4 Graph                                                                                              fixture
+ 24 Projekte · 243 Notizen · 24 Quellen · 1.8M · 5 aktiv · 5 in 7 Tagen geändert · Befunde in 20                                                           4/24
+  Projekt                                  12 Wochen     Σ4W Not.▼Größe        Alter Offen V G T W Status
+● Segelboot-Restaurierung                  ···▂▆▇▅▆▄▆▅▂  206   59 ██████  452K heute    53 · 2 2 1
+● Gartenplaner                             ··▁▅▂▄▅▃▇▇▃·  166   34 █████   311K    2T    43 · 2 1 ·
+● Heimkino-Netzwerk                        ···▂▆▃▇▂▃▃▃·  159   22 ███▊    181K    1T    24 · 2 1 ·
+◕ Modellbahn                               ▂▂▄▃▇▂▃▁····    ·   11 ███     116K    3W    15 1 1 · 1
+◐ Sternkarten-Atlas                        ▁·▁▂▇▁······    ·   12 ██▉     100K    5W    19 + · · 1
+◐ Kleinstadt-Chronik                       ▇···········    ·   18 ██▋      90K    2M    17 + · · ·
+◐ Orgelbau-Notizen                         ▅▃▇▃········    ·    7 ██▎      67K    7W    13 7 1 · ·
+○ Familienrezepte                          ············    ·    8 ██▎      65K    3M    13 8 · · ·
+◕ Sauerteig-Labor                          ··▇▃▁▇▂▄▆▄··   48   14 ██▎      62K    9T    17 · · · 1
+◕ Podcast-Schnitt                          ·▄▃▁▂▂▁▇▂▁··    7    4 ██▏      53K    2W    10 · 1 · · aktiv
+◐ Schachtraining                           ·▇··········    ·    5 ██       49K    9W    11 5 · · · pausiert
+◕ Fahrrad-Werkstatt                        ·▁▃▅▁▂▃▇▃▄··   24    9 ██       48K   12T    13 · · 2 · aktiv
+◐ Vogelbeobachtung                         ▃▃▃▇▅·▁·····    ·    6 █▊       41K    4W     4 2 · · · aktiv
+◐ Loetstation                              ▃▂▇▄▁·······    ·    3 █▋       34K    6W     4 3 · · ·
+● Wetterstation                            ···▆▅▅▄▇▄▇▇·   91    6 █▋       33K    3T    10 · · · 1
+◕ Reisekasse                               ▂▂▃▁▇▅·▄▁···    1    4 █▌       29K    2W     3 · · · · aktiv
+○ Pilz-Zucht                               ············    ·    5 █▍       24K    4M     7 5 · · · pausiert
+◕ Lesezirkel                               ▃▆▇▁▂▂▅·····    ·    3 █▍       23K    4W     4 · · · · aktiv
+○ Imkerei                                  ············    ·    3 █▎       21K    5M     4 3 · · · pausiert
+○ Umzugsliste                              ············    ·    2 ▊         7K    3M     1 2 · · · fertig
+● Balkonbewaesserung                       ··▁▇▂·▅▄▂▁▁·   18    3 ▊         7K    5T     5 · · · ·
+○ Steuerkram                               ············    ·    2 ▋         5K    6M     2 2 · · · fertig
+◕ Kaffeeroesterei                          ··▇▄▃▄▃▁▁▁··    8    2 ▌         3K    8T     3 · · · ·
+○ Zeitkapsel                               ············    ·    1 ▍         2K    4M     3 1 · · ·
+
+ Aktivität 26 Wochen · 2606 Einträge an 105 Tagen · Spitze Mo 2026-10-26 (117)
+    Mai Jun       Jul     Aug       Sep     Okt     Nov    Befunde
+ Mo · · · · · · · · ░░░░· ░░░░▒▒░░░░▒▒████████████████▒▒   V veraltet  G groß
+ Di · · · · · · · ▒▒░░· · ▒▒░░▒▒▒▒▒▒▓▓▓▓██▓▓██▓▓████▓▓     T tote Links  W Waise
+ Mi · · · · · · ░░· · · · ░░░░· ▒▒▒▒▓▓████▓▓████▒▒▓▓▓▓     + = 10 und mehr
+ Do · · · · · · · ░░· · ░░░░░░░░▒▒░░▒▒██▓▓▓▓▓▓▓▓▓▓▓▓▒▒     ▸ Modellbahn  ·  3 Befunde
+ Fr · · · · · · ░░· ░░· ░░░░▒▒░░▒▒▒▒▓▓▓▓████████▓▓▓▓░░     Stand   gleisplan fertig
+ Sa · · · · · · · · · · · · · · ░░▒▒▒▒▓▓██▓▓██▓▓▒▒▓▓▓▓     Pfad    G:/Projekte/Modellbahn
+ So · · · · · · · ░░░░░░· ░░· ░░· · ▒▒▒▒▓▓██▓▓▓▓▒▒▒▒▓▓     Offen   15 · Probelauf mit voller Last einplanen.
+
+
+
+
+
+
+
+ ↑↓ wählen  Enter Projekt  s Sortierung  f 30 Tage  g Graph  / Suche  ? Hilfe  q Ende

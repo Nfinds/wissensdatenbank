@@ -1,0 +1,7 @@
+# wb configuration: only `key = "value"` lines are read.
+# Location: %APPDATA%\wb\config.toml (Windows) or ~/.config/wb/config.toml (Linux/macOS).
+# --vault / WB_VAULT on the command line take precedence.
+
+vault = "C:/path/to/your/vault"
+# index = "C:/path/outside/the/vault/.wb"   # optional, default <vault>/.wb
+# read_only = "true"                         # optional, refuse every write command

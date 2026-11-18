@@ -1,0 +1,45 @@
+ Wissensbank   1 Übersicht   2 Projekt   3 Suche   4 Graph                                                                                              fixture
+ Segelboot-Restaurierung › Lagerung Notizen · Thema · ~665 T · geändert 2026-11-07 · vor 2T
+ Lagerung Notizen                                                                                                         │ Gliederung
+                                                                                                                          │▸S Aktueller Stand               ~84
+ Aktueller Stand                                                                                                          │ O Nächster Schritt             ~112
+                                                                                                                          │ P Prüfungen                    ~140
+ Entscheidung: der Sensor bleibt wie geplant, weil der Aufwand sonst nicht zu rechtfertigen wäre. Entscheidung: das       │
+ Protokoll bleibt wie geplant, weil so der Zeitplan hält. Gemessen wurden 94 Werte über 26 Tage, die Streuung ist klein   │ Links  → 2  ← 4
+ genug für den Vergleich.                                                                                                 │  1 → Materialliste Plan
+                                                                                                                          │  2 → Abnahme Regeln
+ Nächster Schritt                                                                                                         │    ← Aufbau Grundlagen
+                                                                                                                          │    ← Messwerte Stand
+ • Prüfen, ob die Halterung das Gewicht dauerhaft trägt.                                                                  │    ← Skizzen Version 2
+ • Messreihe bei Frost wiederholen.                                                                                       │    ← Zeitplan Messung
+                                                                                                                          │
+ Prüfungen                                                                                                                │
+                                                                                                                          │
+ Die Einzelheiten stehen unter Materialliste Plan[1]. Gemessen wurden 103 Werte über 11 Tage, die Streuung ist klein genug│
+ für den Vergleich.                                                                                                       │
+                                                                                                                          │
+ Die Einzelheiten stehen unter Abnahme Regeln[2]. Entscheidung: der Lieferant bleibt wie geplant, weil der Lieferant nur  │
+ diese Variante führt.                                                                                                    │
+                                                                                                                          │
+                                                                                                                          │
+                                                                                                                          │
+                                                                                                                          │
+                                                                                                                          │
+                                                                                                                          │
+                                                                                                                          │
+                                                                                                                          │
+                                                                                                                          │
+                                                                                                                          │
+                                                                                                                          │
+                                                                                                                          │
+                                                                                                                          │
+                                                                                                                          │
+                                                                                                                          │
+                                                                                                                          │
+                                                                                                                          │
+                                                                                                                          │
+                                                                                                                          │
+                                                                                                                          │
+                                                                                                                          │
+                                                                                                                          │
+ ↑↓ Link wählen  Enter folgen  Tab zurück zum Text  Esc zurück  ? Hilfe  q Ende

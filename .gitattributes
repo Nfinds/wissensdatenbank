@@ -1,0 +1,17 @@
+# Text always with LF, also with core.autocrlf=true.
+* text=auto eol=lf
+
+# Never rewrite binary formats
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.webp binary
+*.ico binary
+*.pdf binary
+*.zip binary
+*.gz binary
+*.db binary
+*.sqlite binary
+*.exe binary
+*.dll binary

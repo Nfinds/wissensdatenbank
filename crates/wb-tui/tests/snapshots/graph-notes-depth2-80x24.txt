@@ -1,0 +1,24 @@
+ Wissensbank   1 Übersicht   2 Projekt   3 Suche   4 Graph              fixture
+ Lagerung Notizen · 4 eingehend · 2 ausgehend
+ Ebene Notizen · Tiefe 2 · d Tiefe · p Ebene
+
+ Eingehend                  Fokus                      Ausgehend
+ ● Aufbau Grundlagen   ──┐
+ ● Skizzen Version 2   ──┼─ ● Lagerung Notizen    ──┬─ ◕ Materialliste Plan
+ ◕ Messwerte Stand     ──┤                          └─ ◐ Abnahme Regeln
+ ◕ Zeitplan Messung    ──┘
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ←↑↓→ wählen  o lesen  d Tiefe  p Notizen/Projekte  Esc zurück  ? Hilfe  q Ende

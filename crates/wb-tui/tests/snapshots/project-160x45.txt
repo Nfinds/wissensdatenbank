@@ -1,0 +1,45 @@
+ Wissensbank   1 Übersicht   2 Projekt   3 Suche   4 Graph                                                                                              fixture
+ Segelboot-Restaurierung · 59 Notizen · 452K · heute · 53 offen · 5 Befunde                                                                                3/59
+ Stand  rumpf geschliffen, lackierung offen                                   │ Nachbarschaft
+    Thema                                 Größe    Token Alter SOELPQ V G T W │
+● Ü Segelboot-Restaurierung Übersicht     ██████▊  ~5.2k heute SOEL·· · · · · │ Eingehend                                 Fokus
+●   Aufbau Grundlagen                     ██        ~446 heute SOE··· · · · · │ ● Ü Segelboot-Restaurierung Übersic… ──┬─ ● Aufbau im Detail
+●   Aufbau im Detail                      ██▉       ~948    1T ··E··· · · · · │ ● Werkzeuge Entwurf                  ──┘
+● × Schnittstellen Messung                ██████▊  ~5.2k    1T SOEL·Q · · · · │
+●   Lagerung Notizen                      ██▍       ~665    2T SO··P· · · · · │
+●   Verbrauch Stand                       ██▏       ~491    2T SO···· · · · · │
+●   Kontakte Sonderfälle                  ██▊       ~826    3T ··EL·· · · · · │
+●   Lagerung Plan                         ██        ~460    3T SOELPQ · · · · │
+●   Reihenfolge Stand                     ██▌       ~692    3T S····· · · · · │
+●   Lagerung Lehren                       █▊        ~329    4T SOE·P· · · · · │
+●   Prüfstand Entwurf                     █████▋   ~3.6k    4T SO··P· · · · · │
+●   Rückblick Plan                        ███▎     ~1.2k    4T SO·L·· · · · · │
+●   Schnittstellen Messung 2              █▌        ~268    4T SOEL·Q · · · · │
+●   Umbau Plan                            ███████▌ ~6.4k    4T S·EL·· · 1 · · │
+●   Werkzeuge Notizen                     ███▍     ~1.3k    4T S·E·P· · · · · │
+●   Zeitplan Herbst                       █████▌   ~3.4k    4T SOEL·· · · · · │
+●   Lagerung Entwurf                      ██        ~465    5T ·O·L·· · · · · │
+●   Budget Stand                          ██▌       ~716    6T S····· · · · · │
+●   Checkliste Version 2                  ██▊       ~855    6T SOE··Q · · · · │
+●   Fehlerprotokoll Plan                  ████████ ~7.3k    6T SO··P· · 1 · · │
+●   Prüfstand Auswertung                  ███▏     ~1.1k    6T ······ · · · · │
+●   Werkzeuge Entwurf                     █▉        ~380    6T SO·L·· · · · · │
+●   Skizzen Version 2                     ██████▊  ~5.2k    7T ·OEL·· · · · · │
+◕   Materialliste Plan                    ██▎       ~585    8T ·OE··· · · · · │
+◕ × Beschaffung Notizen                   ███▌     ~1.4k    9T SOELPQ · · · · │
+◕   Beschaffung Stand                     ████     ~1.8k    9T S·E·P· · · · · │
+◕   Messwerte Stand                       █████▊   ~3.8k    9T SO··P· · · · · │
+◕   Umbau Sonderfälle                     ███▊     ~1.6k    9T SOEL·· · · · · │
+◕   Zeitplan Messung                      ████▍    ~2.2k    9T SO·LP· · · · 1 │
+◕   Beschaffung Entwurf                   ██████   ~4.1k   10T ······ · · · · │
+◕   Rückblick Messung                     █████▉   ~4.0k   10T ·O··P· · · · · │
+◕   Varianten Varianten                   ███▎     ~1.2k   10T S·E··· · · · · │
+◕   Fehlerprotokoll Regeln                ███▋     ~1.5k   12T ·O·L·· · · · · │
+◕   Abnahme Varianten                     ██▉       ~900   13T S···P· · · 1 · │
+◕   Beschaffung Stand 2                   ████▎    ~2.1k   13T S····Q · · · · │
+◕   Budget Version 2                      ███▊     ~1.6k   13T SOE··· · · · · │
+◕   Pflegeplan Notizen                    ██▉       ~911   13T SOELP· · · · · │
+ Aufbau im Detail Aufbau im Detail im Projekt Segelboot-Restaurierung.        │
+ ← 2 eingehend · → 0 ausgehend · Entscheidungen                               │
+ S Stand O Offen E Entsch. L Lehren P Prüf. Q Quellen × überholt              │
+ ↑↓ wählen  Enter lesen  g Graph  s Sortierung  Tab nächstes Projekt  Esc zurück  ? Hilfe  q Ende

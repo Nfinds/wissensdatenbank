@@ -1,0 +1,45 @@
+ Wissensbank   1 Übersicht   2 Projekt   3 Suche   4 Graph                                                                                              fixture
+ Lagerung Notizen · 4 eingehend · 2 ausgehend
+ Ebene Notizen · Tiefe 2 · d Tiefe · p Ebene
+
+ Eingehend ·2                    Eingehend                       Fokus                           Ausgehend                       Ausgehend ·2
+ ● Ü Segelboot-Restaurieru… ──── ● Aufbau Grundlagen        ──┐
+                                                              │
+ ● × Schnittstellen Messung ──┬─ ● Skizzen Version 2        ──┤
+ ◕ Budget Version 2         ──┘                               ├─ ● Lagerung Notizen         ──┬─ ◕ Materialliste Plan
+                                                              │                               └─ ◐ Abnahme Regeln           ──── ◕ Messwerte Stand
+ ◐ Abnahme Regeln           ──── ◕ Messwerte Stand          ──┤
+                                                              │
+                                 ◕ Zeitplan Messung         ──┘
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ ←↑↓→ wählen  o lesen  d Tiefe  p Notizen/Projekte  Esc zurück  ? Hilfe  q Ende

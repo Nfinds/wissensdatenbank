@@ -1,0 +1,29 @@
+[package]
+name = "wb-cli"
+description = "wb: Wissensbank-CLI (Agent-Ebene; `wb ui` für Menschen)"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[[bin]]
+name = "wb"
+path = "src/main.rs"
+
+[features]
+default = ["ui"]
+# `wb ui` ruft `wb_tui::run_vault`. Ohne dieses Feature meldet `wb ui` einen verständlichen Fehler.
+ui = ["dep:wb-tui"]
+
+[dependencies]
+wb-core.workspace = true
+clap.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+wb-tui = { workspace = true, features = ["core"], optional = true }
+
+[dev-dependencies]
+tempfile.workspace = true
+rusqlite.workspace = true
+serde_json.workspace = true

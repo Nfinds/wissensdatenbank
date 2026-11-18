@@ -1,0 +1,12 @@
+# Build
+/target*/
+# Local vaults, measurements and snapshots never belong in the repo
+/Saved/
+/vault/
+# Derived index and lock files of a vault
+.wb/
+.wb-lock
+.wb-tmp*
+*.db
+*.db-wal
+*.db-shm

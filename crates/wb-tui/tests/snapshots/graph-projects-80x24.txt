@@ -1,0 +1,24 @@
+ Wissensbank   1 Übersicht   2 Projekt   3 Suche   4 Graph              fixture
+ 20 von 24 Projekten sind verbunden · Segelboot-Restaurierung hat 17 Nachbarn
+ Ebene Projekte · Tiefe 2 · d Tiefe · p Ebene
+
+ Fokus                      Verbunden                  Verbunden ·2
+                         ┌─ ● Heimkino-Netzw… 10Q ──┬─ ◕ Kaffeeroesterei 2Q
+                         │                          └─ ◐ Orgelbau-Notizen
+                         │
+                         ├─ ● Gartenplaner 8Q +7  ──┬─ ◐ Sternkarten-Atlas
+                         │                          └─ ◕ Sauerteig-Labor 2Q
+                         │
+ ● Segelboot-Restauri… ──┼─ ◐ Kleinstadt-Chro… +5 ──┬─ ○ Pilz-Zucht 2Q
+                         │                          └─ ◐ Vogelbeobachtung
+                         │
+                         ├─ ○ Familienrezepte 4Q  ──┬─ ● Balkonbewaesserung
+                         │                          └─ ◕ Reisekasse 1Q
+                         │
+                         └─ ◕ Modellbahn 4Q       ──┬─ ○ Steuerkram 1Q
+                                                    └─ ○ Umzugsliste 1Q
+                            … +12 weitere
+
+ Ohne Verbindung (4): Fahrrad-Werkstatt, Lesezirkel, Loetstation,
+ Podcast-Schnitt
+ ←↑↓→ wählen  Tab nächstes  o lesen  d Tiefe  ? Hilfe  q Ende

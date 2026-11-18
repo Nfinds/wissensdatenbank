@@ -1,0 +1,24 @@
+ Wissensbank   1 Übersicht   2 Projekt   3 Suche   4 Graph              fixture
+ Segelboot-Restaurierung › Lagerung Notizen · Thema · ~665 T · geändert 2026-1…
+ Lagerung Notizen                                                              ▌
+
+ Aktueller Stand
+
+ Entscheidung: der Sensor bleibt wie geplant, weil der Aufwand sonst nicht zu
+ rechtfertigen wäre. Entscheidung: das Protokoll bleibt wie geplant, weil so
+ der Zeitplan hält. Gemessen wurden 94 Werte über 26 Tage, die Streuung ist
+ klein genug für den Vergleich.
+
+ Nächster Schritt
+
+ • Prüfen, ob die Halterung das Gewicht dauerhaft trägt.
+ • Messreihe bei Frost wiederholen.
+─ Links ────────────────────────────────────────────────────────────────────────
+ → Materialliste Plan
+ → Abnahme Regeln
+ ← Aufbau Grundlagen
+ ← Messwerte Stand
+ ← Skizzen Version 2
+ ← Zeitplan Messung
+
+ ↑↓ Link wählen  Enter folgen  Tab zurück zum Text  Esc zurück  ? Hilfe  q Ende

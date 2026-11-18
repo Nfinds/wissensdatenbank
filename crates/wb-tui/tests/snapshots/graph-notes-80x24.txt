@@ -1,0 +1,24 @@
+ Wissensbank   1 Übersicht   2 Projekt   3 Suche   4 Graph              fixture
+ Segelboot-Restaurierung Übersicht · 0 eingehend · 52 ausgehend
+ Ebene Notizen · Tiefe 1 · d Tiefe · p Ebene
+
+ Fokus                                    Ausgehend
+                                       ┌─ ● Aufbau Grundlagen
+                                       ├─ ● Aufbau im Detail
+                                       ├─ ● Verbrauch Stand
+                                       ├─ ● Kontakte Sonderfälle
+                                       ├─ ● Lagerung Plan
+                                       ├─ ● Reihenfolge Stand
+                                       ├─ ● Lagerung Lehren
+                                       ├─ ● Prüfstand Entwurf
+ ● Segelboot-Restaurierung Übersicht ──┼─ ● Rückblick Plan
+                                       ├─ ● Schnittstellen Messung 2
+                                       ├─ ● Umbau Plan
+                                       ├─ ● Werkzeuge Notizen
+                                       ├─ ● Zeitplan Herbst
+                                       ├─ ● Lagerung Entwurf
+                                       ├─ ● Budget Stand
+                                       ├─ ● Checkliste Version 2
+                                       └─ ● Fehlerprotokoll Plan
+                                          … +35 weitere
+ ←↑↓→ wählen  o lesen  d Tiefe  p Notizen/Projekte  Esc zurück  ? Hilfe  q Ende
