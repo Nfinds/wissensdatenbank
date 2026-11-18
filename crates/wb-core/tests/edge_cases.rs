@@ -1017,3 +1017,14 @@ fn mv_case_only_rename() {
     assert!(names.contains(&"andere.md".to_string()) && !names.contains(&"Andere.md".to_string()), "{names:?}");
     assert!(file(&fx, "Projects/M/00 Overview.md").contains("- [[Projects/M/andere]] bleibt\n"));
 }
+
+/// Schreibbefehle nehmen auch den absoluten Pfad einer Notiz (Laufwerksbuchstabe oder `/…`).
+#[test]
+fn mv_accepts_absolute_source_path() {
+    let fx = Fx::new();
+    mv_fixture(&fx);
+    let v = fx.synced();
+    let abs = fx.vault.join("Projects").join("M").join("Andere.md");
+    let r = v.move_note(&abs.to_string_lossy(), "Umbenannt").unwrap();
+    assert_eq!(r.to.as_str(), "Projects/M/Umbenannt.md");
+}

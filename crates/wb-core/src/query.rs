@@ -225,7 +225,7 @@ pub(crate) fn resolve_exact(v: &Vault, address: &str) -> Result<NotePath> {
     let root_key = compare_key(&v.root);
     for raw in tries {
         let mut s = raw.trim().trim_matches('"').replace('\\', "/");
-        if s.len() > 2 && s.as_bytes()[1] == b':' {
+        if (s.len() > 2 && s.as_bytes()[1] == b':') || std::path::Path::new(&s).is_absolute() {
             let ak = compare_key(std::path::Path::new(&s));
             if let Some(rest) = ak.strip_prefix(&format!("{root_key}/")) {
                 s = rest.to_string();
