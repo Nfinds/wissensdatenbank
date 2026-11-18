@@ -1,78 +1,129 @@
 <p align="center"><img src="docs/img/hero.png" alt="A human forgets. Your AI never does. wb, elephant memory for coding agents."></p>
 
-# wb: a Markdown knowledge base for AI agents
+# wb
 
-<img align="right" src="docs/brand/elephant.svg" width="120" alt="The wb elephant">
+**Memory for coding agents, kept in plain Markdown.**
 
-**A human forgets. Your AI never does.** Elephants are said never to forget; `wb` gives your
-coding agents the same memory, in files you can read yourself.
+Your agent solves a problem today and has forgotten it tomorrow. `wb` gives it a knowledge base
+it can search before every task and write to after: notes in a folder you own, and a small
+command line tool that finds the one section that answers the question.
 
-`wb` is a local knowledge system for coding agents (Claude Code, Codex, …) and the people working
-with them. Notes stay plain Markdown files in a folder (the *vault*); `wb` keeps a derived SQLite
-index (FTS5 full text, trigrams, link graph, journal) and answers with **budgeted, line-oriented
-output** so an agent can find the one section it needs instead of reading whole files.
+It runs locally, in one binary, with no server and no account. Works with Claude Code, Codex and
+any agent that can run a shell command.
 
-> **Language note:** the CLI messages, help texts and most docs are currently in German.
-> Commands, flags and the JSON output are language-neutral. Contributions for an English UI are welcome.
+<p align="center"><img src="docs/img/cli-search.png" width="880" alt="An agent runs wb search and gets three hits, each with an address, a line range and a token price. wb read then returns only the section it asked for."></p>
 
-## Why
+Every hit is a section, not a file. It comes with an address the agent can read next and a price
+in tokens, so the agent knows what a lookup costs before it pays for it.
 
-Agents that keep notes in Markdown usually look things up with glob + grep + "read the whole
-file". That burns tokens and misses notes whose words differ slightly (`Größe` vs `groesse`,
-compounds, typos). `wb` adds:
+> [!NOTE]
+> The commands, flags and JSON output are language-neutral. The help texts and messages of the
+> tool are currently in German. An English interface is a welcome contribution.
 
-- **Section-level hits** with a stable address `Note#Section` and a token price on every line.
-- **German and English stemming, umlaut folding, trigram matching and typo tolerance.**
-- **A hard output budget** (`--budget`); whatever is cut off is named by a runnable `more: wb …` line.
-- **Safe writes:** `wb new` never overwrites, `wb log` appends under a file lock, `wb mv` rewrites
-  all incoming links and finishes an interrupted run on the next start.
-- **Checks** (`wb check`): dead links, broken frontmatter, orphaned notes, oversized notes,
-  suspected secrets (reports path, line and class, never the value).
-- **A terminal UI for humans** (`wb ui`, `wb stats`).
+## Finds more, costs less
 
-<p align="center"><img src="docs/img/cli-search.png" width="860" alt="An agent searches with wb search and reads one section with wb read: every hit has an address and a token price"></p>
+Agents usually look things up with glob, grep and "read the whole file". We measured that against
+`wb` on a real vault of over 1,000 notes, with 28 questions an agent would ask before a task. These
+questions were held back during development and run separately.
 
-What the agent sees: one line per hit with an address (`Note#Section`), line range, type, date
-and the price in tokens. `wb read` then returns just that section.
+| Method | Answer in the top 3 | Right at the top | Tokens until the answer |
+|---|---:|---:|---:|
+| **`wb search` + `wb read`** | **28 of 28** | **24** | **1,016** |
+| `ripgrep`, files ranked by matched terms | 26 of 28 | 17 | 1,896 |
+| Glob, grep, read whole files | 7 of 28 | 7 | 2,737 |
 
-In our own measurement on a real vault of ~1,000 notes, `wb search` + `wb read` found the answer
-in the top 3 for 27–28 of 28 questions, against 23–26 for ranked `ripgrep`, and needed about
-35–45 % fewer tokens until the answer.
+Speed is on par with `ripgrep`: 20 to 40 ms per call, including the start of the process.
+`ripgrep` is just as good when you already know the project name or a rare identifier.
+The gain is in everything else, and in the tokens: about 45 % fewer until the answer.
 
-## Install
+## Get started
 
-Requires Rust 1.91 or newer.
+You need [Rust](https://rustup.rs) 1.91 or newer.
 
 ```bash
-cargo build --release -p wb-cli
+git clone https://github.com/Nfinds/wissensdatenbank
+cd wissensdatenbank
+cargo install --path crates/wb-cli
 ```
 
-Copy `target/release/wb` (`wb.exe` on Windows) to a folder on your `PATH`.
-
-## Set up a vault
+Create a vault from the empty template and build its index:
 
 ```bash
-# start from the empty template in this repo, or any folder of Markdown notes
 cp -a examples/vault ~/notes
 cd ~/notes
-wb sync --init          # creates the index in <vault>/.wb/
+wb sync --init
 ```
 
-`wb` finds the vault in this order: `--vault <folder>`, the environment variable `WB_VAULT`,
-`vault = "…"` in `%APPDATA%\wb\config.toml` (Windows) or `~/.config/wb/config.toml` (elsewhere),
-then the first folder with a `.wb/` index upwards from the current directory.
-See [`examples/config.toml`](examples/config.toml).
+Then try it:
 
-## Vault layout
+```bash
+wb context                             # list your projects
+wb context Example                     # status, open points, topics, latest journal lines
+wb search backup restore               # hits by section, with token prices
+wb read "Projects/Example/Backup#Restore"
+```
+
+`wb` finds your vault through `--vault`, the environment variable `WB_VAULT`, a
+[config file](examples/config.toml), or the nearest folder with a `.wb/` index above the current
+directory.
+
+## One call briefs your agent
+
+<p align="center"><img src="docs/img/cli-context.png" width="760" alt="wb context for one project: status, open points, every topic with a one-line summary, age and token price, and the latest journal lines"></p>
+
+`wb context` is where an agent starts. One call returns the status of the project, what is still
+open, every topic with a one-line summary, and the last changes. From there it reads only what it
+needs.
+
+To teach your agent the routine, paste [`examples/AGENT-RULES.md`](examples/AGENT-RULES.md) into
+its instruction file (`CLAUDE.md`, `AGENTS.md`). The output format, budgets and exit codes are in
+[`docs/AGENT-GUIDE.md`](docs/AGENT-GUIDE.md).
+
+## Commands
+
+| Command | What it does |
+|---|---|
+| `wb context` | Entry point: one project at a glance, or the list of all projects |
+| `wb search` | Search by section, in German and English, tolerant of typos, umlauts and compounds |
+| `wb read` | Read one note, one section or a line range, never more than the budget |
+| `wb new` | Create a note with valid frontmatter and link it in the project overview. Never overwrites |
+| `wb log` | Append one line to the journal, safe with several agents at once |
+| `wb mv` | Rename or move a note and rewrite every link that points to it |
+| `wb check` | Find dead links, broken frontmatter, orphaned or oversized notes and suspected secrets |
+| `wb sync` | Bring the index up to date. Runs by itself before every read |
+| `wb ui`, `wb stats` | The terminal views for people |
+
+Every read command takes `--budget <tokens>` as a hard limit. Whatever is cut off is named by a
+`more:` line with the exact command that continues. `--json` gives the same fields for parsers.
+
+## A terminal UI for you
+
+`wb ui` shows where your knowledge lives, what is active and what is going stale. Keyboard only.
+
+<p align="center"><img src="docs/img/ui-overview.png" width="880" alt="Overview: five projects with twelve weeks of activity, size, age and open points, and a heatmap of 26 weeks"></p>
+
+<p align="center">
+  <img src="docs/img/ui-project.png" width="32%" alt="Project view: topics with size, tokens and age, next to the links between them">
+  <img src="docs/img/ui-search.png" width="32%" alt="Search with a live preview and highlighted hits">
+  <img src="docs/img/ui-reader.png" width="32%" alt="Reader with an outline, token prices per section and numbered links">
+</p>
+
+Overview, project, search and reader. The screenshots show [`docs/demo-vault`](docs/demo-vault),
+a vault with invented projects.
+
+## Your notes stay plain files
+
+A vault is a folder of Markdown. Edit it with any editor, sync it with any tool, put it in Git.
+The index in `.wb/` is derived: delete it and `wb sync --full` builds it again.
 
 ```
-Projects/<Project>/00 Overview.md   map of the project (status, open points, topic list), < 100 lines
+Projects/<Project>/00 Overview.md   the map: status, open points, list of topics
 Projects/<Project>/<Topic>.md       one note per subsystem, decision or investigation
-Sources/Web/<Source>.md             web sources (`wb new -t source`)
-Journal/YYYY-MM.md                  one line per change (`wb log`)
+Sources/Web/<Source>.md             web sources
+Journal/YYYY-MM.md                  one line per change
 ```
 
-Every note has YAML frontmatter, e.g.
+Each note starts with three lines of frontmatter:
 
 ```yaml
 ---
@@ -82,89 +133,73 @@ checked_on: 2026-01-31
 ---
 ```
 
-## Quick start
+`wb` reads the headings to know what a section is about. `Status`, `Open`, `Decisions`,
+`Dead ends`, `Tests` and `Sources` are recognised, in English and in German.
 
-```bash
-wb context                          # list projects
-wb context Example                  # status, open points, topics and recent journal of one project
-wb search backup restore -p Example # section hits with token prices
-wb read "Projects/Example/Backup#Restore"
-wb new "Backup" -p Example --summary "How the nightly backup works"
-wb log -n "Projects/Example/Backup" "Documented the restore test"
-wb check
-```
+## Under the hood
 
-Exit codes: `0` ok, `1` nothing found, `2` wrong call or ambiguous, `3` vault or index not
-reachable, `4` refused because of `--read-only`.
+<details>
+<summary><b>Design decisions</b></summary>
 
-<p align="center"><img src="docs/img/cli-context.png" width="720" alt="wb context: status, open points, topics with one-line summaries and the latest journal lines of one project in a single call"></p>
+- **Files are the truth, the index is derived.** Nothing lives only in the database.
+- **SQLite FTS5**, bundled, with WAL: one store for full text, trigrams, links and the journal.
+  Several processes can read and write at once.
+- **Stemming and folding happen in Rust before FTS5** (Snowball for German and English, lower
+  case, no diacritics, `ß` to `ss`), so `Größe`, `groesse` and `Grosse` match each other.
+- **A passage is a section**, from one heading to the next. Snippets are cut at sentence ends.
+- **The same state gives byte-identical output.** Timings appear only with `--timing`, on stderr.
+- **Writes never leave half a state.** `wb new` creates exclusively, `wb log` appends under a
+  lock, and `wb mv` finishes an interrupted run on the next start.
 
-`wb context` is the entry point: one call gives an agent the status, the open points, every topic
-with its one-line summary, age and price, and the latest journal lines.
+Rejected along the way: tantivy (heavy, one writer, would need a second store for links), an
+index held in memory (no transactions), a custom FTS5 tokenizer (unsafe FFI), and lines as
+passages (too short, too many hits per note).
 
-## For humans: `wb ui`
+</details>
 
-Four views in the terminal, keyboard only: overview of all projects with activity, a project
-map with its link neighbourhood, search with live preview, and a reader with outline and links.
+<details>
+<summary><b>Limits</b></summary>
 
-<p align="center">
-  <img src="docs/img/ui-overview.png" width="49%" alt="Overview: projects with 12-week activity, size, age, open points and a 26-week heatmap">
-  <img src="docs/img/ui-project.png" width="49%" alt="Project map: topics with size, tokens, age and section kinds, next to the link neighbourhood">
-</p>
-<p align="center">
-  <img src="docs/img/ui-search.png" width="49%" alt="Search with live preview and highlighted hits">
-  <img src="docs/img/ui-reader.png" width="49%" alt="Reader with outline, token prices per section and numbered links">
-</p>
+- `wb` matches words, not meaning. A question that shares no word, stem or part of a word with a
+  note will not find it.
+- A change that keeps the file size and resets the modification time goes unnoticed until
+  `wb sync --full`.
+- Copy a vault with its timestamps (`cp -a`, `robocopy /COPY:DAT`). Otherwise notes without
+  `checked_on` look as if they changed today.
+- Code is recognised in fenced blocks and backticks only. Indented code counts as text.
+- `wb new` writes German section headings (`Stand`, `Offen`). Rename them freely.
+- Developed and tested on Windows. On Linux and macOS the local time is currently taken as UTC,
+  so journal dates can be a day off around midnight, and paths are compared without regard to
+  case.
 
-The screenshots show [`docs/demo-vault`](docs/demo-vault), a vault with invented projects. They
-are rebuilt from source with `docs/screenshots.ps1`.
+</details>
 
-## Use it from an agent
-
-Put the rules for your agent into its instruction file (`CLAUDE.md`, `AGENTS.md`, …).
-[`docs/AGENT-GUIDE.md`](docs/AGENT-GUIDE.md) describes the output format (`more:`, `note:`,
-`next:`, `linked:`), budgets and exit codes; [`examples/AGENT-RULES.md`](examples/AGENT-RULES.md)
-is a short block you can paste.
-
-## Repository layout
+<details>
+<summary><b>What is in this repository</b></summary>
 
 | Path | Content |
 |---|---|
-| `crates/wb-core` | model, parsers (frontmatter, links, sections, journal), index, sync, search, checks, write path |
-| `crates/wb-cli` | the `wb` binary: `sync`, `search`, `read`, `context`, `check`, `new`, `log`, `mv`, `stats`, `ui` |
-| `crates/wb-tui` | terminal views (`wb ui`, `wb stats`) |
-| `docs/` | specification (`CONTRACT.md`), agent guide, TUI design |
-| `examples/` | empty vault template, config example, agent rules |
-| `docs/` | demo vault with invented projects, mascot, hero, screenshots and the scripts that build them |
+| `crates/wb-core` | Model, parsers, index, sync, search, checks and the write path |
+| `crates/wb-cli` | The `wb` binary |
+| `crates/wb-tui` | The terminal views behind `wb ui` and `wb stats` |
+| `examples/` | An empty vault to start from, a config file, rules to paste into your agent |
+| `docs/` | Specification, agent guide, the demo vault, and the scripts that build every image here |
 
-## Design decisions
+Build and test with `cargo test --workspace`. The images are rebuilt from source with
+`docs/screenshots.ps1`.
 
-- **Files are the truth, the index is derived.** Delete `<vault>/.wb/` at any time; `wb sync --full` rebuilds it.
-- **SQLite FTS5 via bundled `rusqlite`, WAL, 30 s busy timeout:** one store for full text,
-  trigrams, links and journal, with transactions and several processes at once, no own locking.
-- **Stemming and folding in Rust before FTS5** (Snowball DE + EN, lowercase, no diacritics,
-  ß→ss, ae/oe/ue→a/o/u), so no `unsafe` FFI tokenizer is needed.
-- **Passage = section** (heading to next heading); snippets are cut at sentence boundaries.
-- **Byte-identical output for the same state**; timings only with `--timing` on stderr.
-- **Auto-sync before every read command** (~5 ms when nothing changed).
+</details>
 
-Rejected: tantivy (heavy, single writer, needs a second store for links and journal), an
-in-memory index (would need own transactions), a custom FTS5 tokenizer (unsafe FFI), lines as
-passages (too short, too many hits per note).
+## Kurz auf Deutsch
 
-## Limits
-
-- `wb` matches words, not meaning: a question that shares no word, stem or part of a word with
-  the note will not find it.
-- A change with identical size and a deliberately reset modification time goes unnoticed until `wb sync --full`.
-- Copying a vault without preserving timestamps makes notes without `checked_on` look changed today.
-- Code is recognised only in fenced blocks and backticks; indented code counts as text.
-- New notes from `wb new` get German section headings (`Stand`, `Offen`). English headings
-  (`Status`, `Open`, `Topics`, `Decisions` …) are recognised just as well; rename them freely.
-- Developed and tested on Windows. On Linux and macOS the local time is currently taken as UTC
-  (journal dates near midnight), and path comparison is case-insensitive like on Windows.
-  CI runs the test suite on all three systems.
+`wb` ist ein Gedächtnis für Coding-Agenten: Notizen als Markdown in einem Ordner, dazu ein
+Kommandozeilenwerkzeug, das vor jeder Aufgabe den passenden Abschnitt findet und nach jeder
+Aufgabe das Ergebnis festhält. Alles läuft lokal, ohne Server und ohne Konto. Hilfetexte und
+Meldungen des Programms sind deutsch.
 
 ## License
 
 MIT, see [LICENSE](LICENSE).
+
+<p align="center"><img src="docs/brand/elephant.svg" width="96" alt="The wb elephant"></p>
+<p align="center">Elephants never forget.</p>
