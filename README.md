@@ -103,13 +103,13 @@ Every read command takes `--budget <tokens>` as a hard limit. Whatever is cut of
 <p align="center"><img src="docs/img/ui-overview.png" width="880" alt="Overview: five projects with twelve weeks of activity, size, age and open points, and a heatmap of 26 weeks"></p>
 
 <p align="center">
-  <img src="docs/img/ui-project.png" width="32%" alt="Project view: topics with size, tokens and age, next to the links between them">
-  <img src="docs/img/ui-search.png" width="32%" alt="Search with a live preview and highlighted hits">
-  <img src="docs/img/ui-reader.png" width="32%" alt="Reader with an outline, token prices per section and numbered links">
+  <img src="docs/img/ui-search.png" width="49%" alt="Search with a live preview and highlighted hits">
+  <img src="docs/img/ui-reader.png" width="49%" alt="Reader with an outline, token prices per section and numbered links">
 </p>
 
-Overview, project, search and reader. The screenshots show [`docs/demo-vault`](docs/demo-vault),
-a vault with invented projects.
+Above the overview of all projects, below the search with live preview and the reader. A fourth
+view maps one project and the links between its notes. The screenshots show
+[`docs/demo-vault`](docs/demo-vault), a vault with invented projects.
 
 ## Your notes stay plain files
 
