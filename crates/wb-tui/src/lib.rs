@@ -1,5 +1,5 @@
 //! Menschen-Ebene der Wissensbank: ratatui-Ansichten, Headless-Schnappschüsse, statische Übersicht.
-//! Entwurf und Begründungen: `Docs/TUI.md`.
+//! Entwurf und Begründungen: `docs/TUI.md`.
 
 mod app;
 #[cfg(feature = "core")]

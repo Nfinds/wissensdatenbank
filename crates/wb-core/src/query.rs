@@ -143,7 +143,8 @@ pub(crate) fn resolve(v: &Vault, address: &str) -> Result<NotePath> {
     let mut a = raw.trim().trim_matches('"').replace('\\', "/");
     // Absoluter Pfad im Vault → relativ
     let root_key = compare_key(&v.root);
-    if a.len() > 2 && a.as_bytes()[1] == b':' {
+    // Laufwerksbuchstabe (Windows) oder ein auf dem System absoluter Pfad (`/…` unter Linux und macOS).
+    if (a.len() > 2 && a.as_bytes()[1] == b':') || std::path::Path::new(&a).is_absolute() {
         let ak = compare_key(std::path::Path::new(&a));
         if let Some(rest) = ak.strip_prefix(&format!("{root_key}/")) {
             a = rest.to_string();

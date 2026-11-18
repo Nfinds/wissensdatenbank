@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>wb hero</title>
+<style>
+  /* Source of docs/img/hero.png (1600x760), rendered by docs/screenshots.ps1.
+     NansiFinds brand: ink and white, the Software colour (Smaragd #10936B) only as the ring around the mascot. */
+  :root { --ink: #0B0B0C; --white: #FFFFFF; --grey: #A9ABB0; --label: #3C3C3D; }
+  * { box-sizing: border-box; margin: 0; }
+  html, body { width: 1600px; height: 760px; background: var(--ink); overflow: hidden; }
+  body {
+    color: var(--white);
+    font-family: "Segoe UI Variable Display", "Segoe UI", system-ui, sans-serif;
+    display: grid; grid-template-columns: 1fr 520px; column-gap: 64px;
+    align-items: center; padding: 0 96px 0 96px;
+  }
+  .tag {
+    display: inline-block; background: var(--label); color: var(--white);
+    font: 600 22px "Segoe UI", sans-serif; letter-spacing: .02em;
+    padding: 8px 18px; border-radius: 999px;
+  }
+  h1 { margin-top: 34px; font-size: 96px; line-height: 1.0; letter-spacing: -0.035em; font-weight: 700; }
+  h1 .soft { color: var(--grey); }
+  .lede { margin-top: 34px; font-size: 29px; line-height: 1.42; max-width: 860px; color: #E6E7E9; }
+  .cmd {
+    margin-top: 40px; display: inline-block; padding: 14px 22px; border-radius: 12px;
+    background: #15181d; border: 1px solid #2b3038;
+    font: 24px "Cascadia Mono", Consolas, monospace; color: #E6E7E9;
+  }
+  .cmd .p { color: #6b7380; }
+  .mascot { width: 520px; height: 520px; }
+</style>
+</head>
+<body>
+  <div>
+    <span class="tag">wb · knowledge base for AI agents</span>
+    <h1><span class="soft">A human forgets.</span><br>Your AI never does.</h1>
+    <p class="lede">Elephant memory for coding agents: plain Markdown notes, found by section in milliseconds, at a fraction of the tokens.</p>
+    <div class="cmd"><span class="p">$</span> wb search backup restore</div>
+  </div>
+  <img class="mascot" src="../brand/elephant.svg" alt="">
+</body>
+</html>

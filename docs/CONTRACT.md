@@ -66,7 +66,7 @@ Befehle nach Priorität (hart priorisiert; P3 erst, wenn P1 und P2 abgenommen si
 
 Schreiben: Agenten ändern Notizen weiter mit ihren eigenen Edit-Werkzeugen; der Index heilt sich beim nächsten Aufruf selbst. `wb` schreibt nur dort selbst, wo es Fehler verhindert (`new`, `log`, `mv`). Schreibende Befehle sind atomar (temporäre Datei plus Umbenennen) und verweigern im Nur-Lese-Modus.
 
-Richtungsskizze der Suchausgabe (endgültiges Format in `Docs/AGENT-GUIDE.md`):
+Richtungsskizze der Suchausgabe (endgültiges Format in `docs/AGENT-GUIDE.md`):
 
 ```text
 q="backup restore" hits=3/17 ~410t

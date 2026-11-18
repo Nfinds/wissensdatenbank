@@ -1,4 +1,11 @@
+<p align="center"><img src="docs/img/hero.png" alt="A human forgets. Your AI never does. wb, elephant memory for coding agents."></p>
+
 # wb: a Markdown knowledge base for AI agents
+
+<img align="right" src="docs/brand/elephant.svg" width="120" alt="The wb elephant">
+
+**A human forgets. Your AI never does.** Elephants are said never to forget; `wb` gives your
+coding agents the same memory, in files you can read yourself.
 
 `wb` is a local knowledge system for coding agents (Claude Code, Codex, …) and the people working
 with them. Notes stay plain Markdown files in a folder (the *vault*); `wb` keeps a derived SQLite
@@ -22,6 +29,11 @@ compounds, typos). `wb` adds:
 - **Checks** (`wb check`): dead links, broken frontmatter, orphaned notes, oversized notes,
   suspected secrets (reports path, line and class, never the value).
 - **A terminal UI for humans** (`wb ui`, `wb stats`).
+
+<p align="center"><img src="docs/img/cli-search.png" width="860" alt="An agent searches with wb search and reads one section with wb read: every hit has an address and a token price"></p>
+
+What the agent sees: one line per hit with an address (`Note#Section`), line range, type, date
+and the price in tokens. `wb read` then returns just that section.
 
 In our own measurement on a real vault of ~1,000 notes, `wb search` + `wb read` found the answer
 in the top 3 for 27–28 of 28 questions, against 23–26 for ranked `ripgrep`, and needed about
@@ -85,10 +97,32 @@ wb check
 Exit codes: `0` ok, `1` nothing found, `2` wrong call or ambiguous, `3` vault or index not
 reachable, `4` refused because of `--read-only`.
 
+<p align="center"><img src="docs/img/cli-context.png" width="720" alt="wb context: status, open points, topics with one-line summaries and the latest journal lines of one project in a single call"></p>
+
+`wb context` is the entry point: one call gives an agent the status, the open points, every topic
+with its one-line summary, age and price, and the latest journal lines.
+
+## For humans: `wb ui`
+
+Four views in the terminal, keyboard only: overview of all projects with activity, a project
+map with its link neighbourhood, search with live preview, and a reader with outline and links.
+
+<p align="center">
+  <img src="docs/img/ui-overview.png" width="49%" alt="Overview: projects with 12-week activity, size, age, open points and a 26-week heatmap">
+  <img src="docs/img/ui-project.png" width="49%" alt="Project map: topics with size, tokens, age and section kinds, next to the link neighbourhood">
+</p>
+<p align="center">
+  <img src="docs/img/ui-search.png" width="49%" alt="Search with live preview and highlighted hits">
+  <img src="docs/img/ui-reader.png" width="49%" alt="Reader with outline, token prices per section and numbered links">
+</p>
+
+The screenshots show [`docs/demo-vault`](docs/demo-vault), a vault with invented projects. They
+are rebuilt from source with `docs/screenshots.ps1`.
+
 ## Use it from an agent
 
 Put the rules for your agent into its instruction file (`CLAUDE.md`, `AGENTS.md`, …).
-[`Docs/AGENT-GUIDE.md`](Docs/AGENT-GUIDE.md) describes the output format (`more:`, `note:`,
+[`docs/AGENT-GUIDE.md`](docs/AGENT-GUIDE.md) describes the output format (`more:`, `note:`,
 `next:`, `linked:`), budgets and exit codes; [`examples/AGENT-RULES.md`](examples/AGENT-RULES.md)
 is a short block you can paste.
 
@@ -99,8 +133,9 @@ is a short block you can paste.
 | `crates/wb-core` | model, parsers (frontmatter, links, sections, journal), index, sync, search, checks, write path |
 | `crates/wb-cli` | the `wb` binary: `sync`, `search`, `read`, `context`, `check`, `new`, `log`, `mv`, `stats`, `ui` |
 | `crates/wb-tui` | terminal views (`wb ui`, `wb stats`) |
-| `Docs/` | specification (`CONTRACT.md`), agent guide, TUI design |
+| `docs/` | specification (`CONTRACT.md`), agent guide, TUI design |
 | `examples/` | empty vault template, config example, agent rules |
+| `docs/` | demo vault with invented projects, mascot, hero, screenshots and the scripts that build them |
 
 ## Design decisions
 

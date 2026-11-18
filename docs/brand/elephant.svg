@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="t">
+  <title id="t">wb mascot: an elephant with its trunk raised. Elephants never forget.</title>
+  <!-- NansiFinds brand: ink #0B0B0C and white; the area colour Software (Smaragd #10936B) appears only as the outer ring, 6 % of the diameter. -->
+  <circle cx="256" cy="256" r="256" fill="#0B0B0C"/>
+  <circle cx="256" cy="256" r="240.64" fill="none" stroke="#10936B" stroke-width="30.72"/>
+  <g transform="translate(256 264) scale(0.84) translate(-251 -236)" stroke-linecap="round" stroke-linejoin="round">
+    <!-- tail -->
+    <path d="M424 232 C438 252 440 282 434 306" fill="none" stroke="#FFFFFF" stroke-width="7"/>
+    <path d="M434 302 L428 322 L442 320 Z" fill="#FFFFFF" stroke="#FFFFFF" stroke-width="5"/>
+    <!-- far legs, behind the body -->
+    <path d="M252 296 C256 334 258 368 260 396 L294 396 C292 368 292 334 296 300 Z" fill="#FFFFFF"/>
+    <path d="M350 296 C354 334 356 368 358 396 L392 396 C390 368 390 334 394 300 Z" fill="#FFFFFF"/>
+    <!-- body, head and trunk in one silhouette; the ink outline separates it from the far legs -->
+    <path fill="#FFFFFF" stroke="#0B0B0C" stroke-width="7" d="
+      M130 262
+      C96 248 66 210 64 160
+      C62 120 72 92 90 74
+      L108 72
+      C112 78 114 82 112 86
+      C102 100 98 124 100 156
+      C102 190 120 214 150 222
+      C146 196 150 168 168 148
+      C190 128 224 126 250 144
+      C268 150 280 146 296 146
+      C336 146 370 150 392 166
+      C420 186 430 226 426 262
+      C424 300 420 340 422 398
+      L378 400
+      C376 360 374 328 368 306
+      C336 318 300 320 270 310
+      C268 340 268 370 270 398
+      L222 400
+      C218 360 214 320 208 292
+      C198 276 186 268 176 266
+      C164 266 146 266 130 262 Z"/>
+    <!-- ear -->
+    <path d="M200 160 C248 148 278 196 272 248 C268 284 246 304 220 308 C210 276 202 226 200 160" fill="none" stroke="#0B0B0C" stroke-width="7"/>
+    <!-- tusk -->
+    <path d="M176 256 C162 278 136 288 106 284 C128 277 146 264 156 247" fill="#FFFFFF" stroke="#0B0B0C" stroke-width="6"/>
+    <!-- eye -->
+    <circle cx="176" cy="190" r="5" fill="#0B0B0C"/>
+  </g>
+</svg>
