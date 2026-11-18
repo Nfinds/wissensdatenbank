@@ -22,3 +22,7 @@ tempfile.workspace = true
 [[example]]
 name = "real"
 required-features = ["core"]
+
+[[example]]
+name = "readme_shots"
+required-features = ["core"]

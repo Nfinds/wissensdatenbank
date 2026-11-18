@@ -8,6 +8,9 @@ use wb_tui::{snapshot, App, Theme};
 const W: u16 = 124;
 const H: u16 = 30;
 
+/// Puts the app into the state one screenshot shows.
+type Setup = dyn Fn(&mut App);
+
 fn main() -> std::io::Result<()> {
     let a: Vec<String> = std::env::args().skip(1).collect();
     if a.len() < 3 {
@@ -21,7 +24,7 @@ fn main() -> std::io::Result<()> {
     let out = std::path::Path::new(&a[2]);
     std::fs::create_dir_all(out)?;
 
-    let shots: [(&str, &dyn Fn(&mut App)); 4] = [
+    let shots: [(&str, &Setup); 4] = [
         ("ui-overview", &|_app: &mut App| {}),
         ("ui-project", &|app: &mut App| app.press("Enter")),
         ("ui-search", &|app: &mut App| app.open_search("backup restore")),
